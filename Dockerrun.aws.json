@@ -5,24 +5,28 @@
           "name": "client",
           "image": "jwmcbride1/multi-client",
           "hostname": "client",
-          "essential": false
+          "essential": false,
+          "memory": 128
         },
         {
             "name": "server",
             "image": "jwmcbride1/multi-server",
             "hostname": "api",
-            "essential": false           
+            "essential": false,
+            "memory": 128          
         },
         {
             "name": "worker",
             "image": "jwmcbride1/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
             "image": "jwmcbride1/multi-nginx",
             "essential": true,
+            "memory": 128,
             "portMappings": [
                 {
                     "hostPort": 80,
