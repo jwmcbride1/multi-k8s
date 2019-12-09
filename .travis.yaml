@@ -14,7 +14,7 @@ before_install:
   - gcloud config set project theta-totem-261417
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials multi-clusters
-  - echo "DOCKER_PASSWORD" | docker login -u "DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t jwmcbride1/react-test -f ./client/Dockerfile.dev ./client
 
 script:
